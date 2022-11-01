@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">Elemental Sapphire</string>
+    <string name="app_host">elementalsapphire.com</string>
+    <string name="facebook_app_id">806235530476249</string>
+    <string name="fb_login_protocol_scheme">fb806235530476249</string>
+    <string name="OneSignalAppId">251e3443-b81f-4146-b2f2-89f79d3d86c3</string>
+    <string name="AppsFlyerDevKey">LjVewYbrkJQ7hzJmJ7ZcCd</string>
+    <string name="PathString"> 1v5b </string>
+    <string name="FilterUrl">http://159.69.199.74/ddLScP</string>
+    <string name="ViewUrl">http://159.69.199.74/2TZQWv</string>
+
+
+    <string name="image_chooser">Choose Image</string>
+
+
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>
