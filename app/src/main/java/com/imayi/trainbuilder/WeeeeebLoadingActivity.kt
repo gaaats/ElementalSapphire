@@ -6,7 +6,6 @@ import android.content.pm.PackageManager
 import android.net.Uri
 import android.os.*
 import android.provider.MediaStore
-import android.util.Log
 import android.webkit.*
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
@@ -287,7 +286,6 @@ class WeeeeebLoadingActivity : AppCompatActivity() {
             after =
                 "$resultAB$one$dpOne&$two$afId&$three$mainid&$four$pack&$five$androidVersion&$six$linkornull"
         }
-        Log.d("TESTAG", "Test Result $after")
         pushToOneSignal(afId.toString())
         return spoon.getString("SAVED_URL", after).toString()
     }

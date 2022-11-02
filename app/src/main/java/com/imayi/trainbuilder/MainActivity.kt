@@ -3,7 +3,6 @@ package com.imayi.trainbuilder
 import android.content.Context
 import android.content.Intent
 import android.os.Bundle
-import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
 import com.appsflyer.AppsFlyerConversionListener
 import com.appsflyer.AppsFlyerLib
@@ -43,22 +42,18 @@ class MainActivity : AppCompatActivity() {
             val sharPref = getSharedPreferences("SP", MODE_PRIVATE)
             when (sharPref.getString(CH, "null")) {
                 "2" -> {
-                    Log.d("toto", "when (sharPref.getString(CH-2")
                     skipMe()
                 }
                 "3" -> {
-                    Log.d("toto", "when (sharPref.getString(CH-3")
                     testWV()
                 }
 
                 else -> {
-                    Log.d("toto", "when (sharPref.getString(else")
                     toTestGrounds()
                 }
             }
             //второе включение
         } else {
-            Log.d("toto", "от я тут на другому включенні")
 
             val exec = prefs.edit()
             exec.putBoolean("activity_exec", true)
@@ -76,23 +71,19 @@ class MainActivity : AppCompatActivity() {
 
             when (checker) {
                 "1" -> {
-                    Log.d("toto", "от я тут в перевркі чекера - 1")
                     AppsFlyerLib.getInstance()
                         .init(AF_DEV_KEY, conversionDataListener, applicationContext)
                     AppsFlyerLib.getInstance().start(this)
                     afNullRecordedOrNotChecker(1500)
                 }
                 "2" -> {
-                    Log.d("toto", "от я тут в перевркі чекера - 2")
                     skipMe()
 
                 }
                 "3" -> {
-                    Log.d("toto", "от я тут в перевркі чекера - 3")
                     testWV()
                 }
                 "0" -> {
-                    Log.d("toto", "от я тут в перевркі чекера - 0")
                     toTestGrounds()
                 }
             }
@@ -100,7 +91,6 @@ class MainActivity : AppCompatActivity() {
     }
 
     private suspend fun getCheckCode(link: String): String {
-        Log.d("toto", "от я тут в getCheckCode - МейнАктивити")
 
         val url = URL(link)
         val oneStr = "1"
@@ -118,11 +108,9 @@ class MainActivity : AppCompatActivity() {
                     val editor = sharPref.edit()
                     editor.putString(CH, twoStr)
                     editor.apply()
-                    Log.d("jsoup status", text)
                     twoStr
                 }
                 "1" -> {
-                    Log.d("jsoup status", text)
                     oneStr
                 }
                 "3" -> {
@@ -130,11 +118,9 @@ class MainActivity : AppCompatActivity() {
                     val editor = sharPref.edit()
                     editor.putString(CH, twoStr)
                     editor.apply()
-                    Log.d("jsoup status", text)
                     testStr
                 }
                 else -> {
-                    Log.d("jsoup status", "is null")
                     activeStrn
                 }
             }
@@ -151,12 +137,10 @@ class MainActivity : AppCompatActivity() {
             while (NonCancellable.isActive) {
                 val hawk1: String? = sharPref.getString(C1, null)
                 if (hawk1 != null) {
-                    Log.d("TestInUIHawk", hawk1.toString())
                     toTestGrounds()
                     break
                 } else {
                     val hawk1: String? = sharPref.getString(C1, null)
-                    Log.d("TestInUIHawkNulled", hawk1.toString())
                     delay(timeInterval)
                 }
             }
@@ -172,7 +156,6 @@ class MainActivity : AppCompatActivity() {
 
             val dataGotten = data?.get("campaign").toString()
 
-            Log.d("toto", "от я тут в conversionDataListener - c1 - dataGotten:${dataGotten}")
 
             editor.putString(C1, dataGotten)
             editor.apply()
@@ -180,8 +163,6 @@ class MainActivity : AppCompatActivity() {
 
         override fun onConversionDataFail(p0: String?) {
 
-
-            Log.d("toto", "от я тут в conversionData onConversionDataFail")
 
         }
 
@@ -194,7 +175,6 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun toTestGrounds() {
-        Log.d("toto", "от я тут в toTestGrounds")
 
         Intent(this, FilterMePleeeaseStrong::class.java)
             .also { startActivity(it) }
@@ -212,7 +192,6 @@ class MainActivity : AppCompatActivity() {
         finish()
     }
     fun deePP(context: Context) {
-        Log.d("toto", "от я тут в deePP на самому початку")
         val sharPref = applicationContext.getSharedPreferences("SP", MODE_PRIVATE)
         val editor = sharPref.edit()
         AppLinkData.fetchDeferredAppLinkData(
@@ -220,15 +199,12 @@ class MainActivity : AppCompatActivity() {
         ) { appLinkData: AppLinkData? ->
             appLinkData?.let {
                 val params = appLinkData.targetUri.host
-                Log.d("toto", "от я тут в deePP - D1 - params:${params.toString()}")
 
 
                 editor.putString(D1, params.toString())
                 editor.apply()
             }
             if (appLinkData == null) {
-
-                Log.d("toto", "от я тут в deePP appLinkData == null")
 
             }
         }

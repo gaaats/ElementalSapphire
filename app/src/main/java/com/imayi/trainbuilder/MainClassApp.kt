@@ -2,7 +2,6 @@ package com.imayi.trainbuilder
 
 import android.app.Application
 import android.content.Context
-import android.util.Log
 import com.google.android.gms.ads.identifier.AdvertisingIdClient
 import com.onesignal.OneSignal
 import kotlinx.coroutines.Dispatchers
@@ -65,7 +64,6 @@ class Adv(context: Context) {
         withContext(Dispatchers.IO) {
             adInfo.start()
             val adIdInfo = adInfo.info
-            Log.d("getAdvertisingId = ", adIdInfo.id.toString())
             adIdInfo.id
         }
 }
