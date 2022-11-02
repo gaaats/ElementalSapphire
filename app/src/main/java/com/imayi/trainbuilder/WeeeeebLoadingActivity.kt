@@ -255,7 +255,7 @@ class WeeeeebLoadingActivity : AppCompatActivity() {
         val dpOne: String? = sharPref.getString(D1, "null")
         val mainid: String? = sharPref.getString(MAIN_ID, null)
 
-        val pack = "com.Garawell.Bri"
+        val pack = "com.imayi.trainbuilder"
 
         val afId = AppsFlyerLib.getInstance().getAppsFlyerUID(this)
 

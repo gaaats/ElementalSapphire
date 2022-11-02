@@ -16,8 +16,11 @@ class MainClassApp : Application() {
         const val jsoupCheck = "1v5b"
         const val ONESIGNAL_APP_ID = "251e3443-b81f-4146-b2f2-89f79d3d86c3"
 
+
+        // can i delete it?
         val linkFilterPart1 = "http://elemental"
         val linkFilterPart2 = "sapphire.xyz/go.php?to=1&"
+
         val linkAppsCheckPart1 = "http://elemental"
         val linkAppsCheckPart2 = "sapphire.xyz/apps.txt"
 
