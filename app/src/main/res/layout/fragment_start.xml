@@ -7,7 +7,7 @@
     android:background="@drawable/bkg_custom_grad_lin"
     android:gravity="center"
     android:orientation="vertical"
-    tools:context=".StartFragment">
+    tools:context=".gameefolder.StartFragment">
 
     <ImageView
         android:id="@+id/img_logo_game_1"
@@ -21,16 +21,15 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Your best score :0"
-        android:textColor="@color/add_colour_the_most_dark"
+        android:textColor="@color/white"
         android:textSize="26sp" />
 
-    <androidx.appcompat.widget.AppCompatButton
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/btn_start"
         android:layout_width="150dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="64dp"
         android:layout_marginBottom="16dp"
-        android:background="@drawable/custom_cornered_btn"
         android:text="start"
         android:textAllCaps="true"
         android:textColor="@color/white"

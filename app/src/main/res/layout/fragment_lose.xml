@@ -5,7 +5,7 @@
     android:background="@drawable/bkg_custom_grad_lin"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".LoseFragment">
+    tools:context=".gameefolder.LoseFragment">
 
 
 
@@ -88,19 +88,18 @@
         android:layout_marginTop="8dp"
         android:gravity="center"
         android:text="Sorry but you lost...\nTry again or exit???"
-        android:textColor="@color/add_colour_the_most_dark"
+        android:textColor="@color/white"
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="@id/guideline_vert_80"
         app:layout_constraintStart_toStartOf="@id/guideline_vert_20"
         app:layout_constraintTop_toBottomOf="@id/lottie_anim_lose" />
 
-    <androidx.appcompat.widget.AppCompatButton
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/btn_try_again"
-        android:layout_width="120dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:layout_marginBottom="16dp"
-        android:background="@drawable/custom_cornered_btn"
         android:text="try again"
         android:textAllCaps="true"
         android:textColor="@color/white"
@@ -109,13 +108,12 @@
         app:layout_constraintStart_toEndOf="@id/btn_exit"
         app:layout_constraintTop_toBottomOf="@id/tv_loosed_try_again" />
 
-    <androidx.appcompat.widget.AppCompatButton
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/btn_exit"
-        android:layout_width="120dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:layout_marginBottom="16dp"
-        android:background="@drawable/custom_cornered_btn"
         android:text="exit"
         android:textAllCaps="true"
         android:textColor="@color/white"
